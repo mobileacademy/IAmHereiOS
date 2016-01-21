@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A00EEDB4E680AE3470AFF4E /* libPods-iamhere.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5807E0D211218033990ADF /* libPods-iamhere.a */; };
 		913A51C91C517DDD001E280E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 913A51C81C517DDD001E280E /* main.m */; };
 		913A51CC1C517DDD001E280E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 913A51CB1C517DDD001E280E /* AppDelegate.m */; };
 		913A51CF1C517DDD001E280E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913A51CE1C517DDD001E280E /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F0A32689AECF46DC7E0DEF3 /* Pods-iamhere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iamhere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iamhere/Pods-iamhere.debug.xcconfig"; sourceTree = "<group>"; };
+		8D5807E0D211218033990ADF /* libPods-iamhere.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iamhere.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		913A51C41C517DDD001E280E /* iamhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iamhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913A51C81C517DDD001E280E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		913A51CA1C517DDD001E280E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		913A51E81C517DDD001E280E /* iamhereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iamhereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		913A51EC1C517DDD001E280E /* iamhereUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iamhereUITests.m; sourceTree = "<group>"; };
 		913A51EE1C517DDD001E280E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECB76EBEA2AEB70D43C9AE98 /* Pods-iamhere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iamhere.release.xcconfig"; path = "Pods/Target Support Files/Pods-iamhere/Pods-iamhere.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A00EEDB4E680AE3470AFF4E /* libPods-iamhere.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BBC961521C64880EB2DEEF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A32689AECF46DC7E0DEF3 /* Pods-iamhere.debug.xcconfig */,
+				ECB76EBEA2AEB70D43C9AE98 /* Pods-iamhere.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		913A51BB1C517DDD001E280E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,8 @@
 				913A51E01C517DDD001E280E /* iamhereTests */,
 				913A51EB1C517DDD001E280E /* iamhereUITests */,
 				913A51C51C517DDD001E280E /* Products */,
+				5BBC961521C64880EB2DEEF0 /* Pods */,
+				D2BE4BBAA1B819B9D3F55641 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +156,14 @@
 			path = iamhereUITests;
 			sourceTree = "<group>";
 		};
+		D2BE4BBAA1B819B9D3F55641 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D5807E0D211218033990ADF /* libPods-iamhere.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 913A51F11C517DDD001E280E /* Build configuration list for PBXNativeTarget "iamhere" */;
 			buildPhases = (
+				C369681D122C37C2491A0A64 /* Check Pods Manifest.lock */,
 				913A51C01C517DDD001E280E /* Sources */,
 				913A51C11C517DDD001E280E /* Frameworks */,
 				913A51C21C517DDD001E280E /* Resources */,
+				DDD414ECDBB58488BA1DDAC8 /* Embed Pods Frameworks */,
+				A8015AF4D6BCEB2A89B6B44B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A8015AF4D6BCEB2A89B6B44B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iamhere/Pods-iamhere-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C369681D122C37C2491A0A64 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DDD414ECDBB58488BA1DDAC8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iamhere/Pods-iamhere-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		913A51C01C517DDD001E280E /* Sources */ = {
@@ -409,6 +484,7 @@
 		};
 		913A51F21C517DDD001E280E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F0A32689AECF46DC7E0DEF3 /* Pods-iamhere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iamhere/Info.plist;
@@ -420,6 +496,7 @@
 		};
 		913A51F31C517DDD001E280E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECB76EBEA2AEB70D43C9AE98 /* Pods-iamhere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iamhere/Info.plist;
@@ -496,6 +573,7 @@
 				913A51F31C517DDD001E280E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		913A51F41C517DDD001E280E /* Build configuration list for PBXNativeTarget "iamhereTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +582,7 @@
 				913A51F61C517DDD001E280E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		913A51F71C517DDD001E280E /* Build configuration list for PBXNativeTarget "iamhereUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +591,7 @@
 				913A51F91C517DDD001E280E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
