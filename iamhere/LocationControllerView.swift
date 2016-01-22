@@ -12,6 +12,9 @@ import CoreLocation
 
 class LocationControllerView: UIViewController, CLLocationManagerDelegate{
     
+    @IBOutlet weak var longLabel: UILabel!
+    @IBOutlet weak var latLabel: UILabel!
+    
     var locationManager:CLLocationManager?
     
     override func viewDidLoad(){
@@ -56,7 +59,8 @@ class LocationControllerView: UIViewController, CLLocationManagerDelegate{
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let finalEl = locations[locations.count-1]
         
-        print( finalEl )
+        longLabel.text = String(finalEl.coordinate.longitude)
+        latLabel.text = String(finalEl.coordinate.latitude)
     }
     
 }

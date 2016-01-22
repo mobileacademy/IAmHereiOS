@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -70,8 +71,34 @@
                     <view key="view" contentMode="scaleToFill" id="ZoD-fC-9hD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcl-dY-Oaw">
+                                <rect key="frame" x="20" y="28" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSd-gl-mTg">
+                                <rect key="frame" x="280" y="28" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qSd-gl-mTg" secondAttribute="trailing" id="2WN-mf-U6r"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vcl-dY-Oaw" secondAttribute="leading" id="EjA-yF-YMz"/>
+                            <constraint firstItem="qSd-gl-mTg" firstAttribute="top" secondItem="so5-mI-pov" secondAttribute="bottom" constant="8" id="OMo-aA-wUw"/>
+                            <constraint firstItem="qSd-gl-mTg" firstAttribute="width" secondItem="ZoD-fC-9hD" secondAttribute="width" multiplier="0.5" id="dv4-Rb-sr1"/>
+                            <constraint firstItem="vcl-dY-Oaw" firstAttribute="top" secondItem="so5-mI-pov" secondAttribute="bottom" constant="8" id="mod-ar-rlx"/>
+                            <constraint firstItem="vcl-dY-Oaw" firstAttribute="width" secondItem="ZoD-fC-9hD" secondAttribute="width" multiplier="0.5" id="yB8-2a-xKM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="latLabel" destination="vcl-dY-Oaw" id="l9h-Cf-K02"/>
+                        <outlet property="longLabel" destination="qSd-gl-mTg" id="fUa-nF-Lzq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZT-1O-A0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
