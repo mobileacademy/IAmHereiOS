@@ -63,6 +63,8 @@ class LocationControllerView: UIViewController, CLLocationManagerDelegate{
         
         longLabel.text = String(finalEl.coordinate.longitude)
         latLabel.text = String(finalEl.coordinate.latitude)
+        
+        map.setRegion( MKCoordinateRegion(center:finalEl.coordinate, span:MKCoordinateSpan(latitudeDelta:0.01, longitudeDelta:0.01) ), animated: true)
     }
     
 }
