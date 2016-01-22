@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A00EEDB4E680AE3470AFF4E /* libPods-iamhere.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5807E0D211218033990ADF /* libPods-iamhere.a */; };
+		8E2206A81C52387F00501072 /* LocationControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2206A71C52387F00501072 /* LocationControllerView.swift */; };
 		913A51C91C517DDD001E280E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 913A51C81C517DDD001E280E /* main.m */; };
 		913A51CC1C517DDD001E280E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 913A51CB1C517DDD001E280E /* AppDelegate.m */; };
 		913A51CF1C517DDD001E280E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913A51CE1C517DDD001E280E /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		2F0A32689AECF46DC7E0DEF3 /* Pods-iamhere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iamhere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iamhere/Pods-iamhere.debug.xcconfig"; sourceTree = "<group>"; };
 		8D5807E0D211218033990ADF /* libPods-iamhere.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iamhere.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E2206A61C52387F00501072 /* iamhere-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iamhere-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E2206A71C52387F00501072 /* LocationControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationControllerView.swift; sourceTree = "<group>"; };
 		913A51C41C517DDD001E280E /* iamhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iamhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913A51C81C517DDD001E280E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		913A51CA1C517DDD001E280E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				913A51D51C517DDD001E280E /* LaunchScreen.storyboard */,
 				913A51D81C517DDD001E280E /* Info.plist */,
 				913A51C71C517DDD001E280E /* Supporting Files */,
+				8E2206A71C52387F00501072 /* LocationControllerView.swift */,
+				8E2206A61C52387F00501072 /* iamhere-Bridging-Header.h */,
 			);
 			path = iamhere;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 		913A51BC1C517DDD001E280E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Mobile Academy";
 				TargetAttributes = {
@@ -354,6 +360,7 @@
 				913A51CF1C517DDD001E280E /* ViewController.m in Sources */,
 				913A51CC1C517DDD001E280E /* AppDelegate.m in Sources */,
 				913A51C91C517DDD001E280E /* main.m in Sources */,
+				8E2206A81C52387F00501072 /* LocationControllerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +500,7 @@
 			baseConfigurationReference = 2F0A32689AECF46DC7E0DEF3 /* Pods-iamhere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iamhere/Info.plist;
@@ -500,6 +508,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ro.mobileacademy.iamhere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "iamhere/iamhere-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -508,6 +518,7 @@
 			baseConfigurationReference = ECB76EBEA2AEB70D43C9AE98 /* Pods-iamhere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iamhere/Info.plist;
@@ -515,6 +526,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ro.mobileacademy.iamhere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "iamhere/iamhere-Bridging-Header.h";
 			};
 			name = Release;
 		};

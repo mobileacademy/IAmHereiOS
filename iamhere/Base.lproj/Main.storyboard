@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -36,8 +37,19 @@
                                     <action selector="pushSomething:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TiU-tk-61d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiw-D0-wFj">
+                                <rect key="frame" x="521" y="550" width="59" height="30"/>
+                                <state key="normal" title="Location"/>
+                                <connections>
+                                    <segue destination="OED-N4-fqm" kind="show" id="3hC-FZ-9gn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fiw-D0-wFj" secondAttribute="trailing" id="bFO-k3-4pS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fiw-D0-wFj" secondAttribute="bottom" constant="20" id="rzc-V3-cC4"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="labelToken" destination="Vgs-MZ-Imw" id="rEC-uf-rwE"/>
@@ -45,12 +57,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333" y="377"/>
+            <point key="canvasLocation" x="267" y="129"/>
         </scene>
-        <!--View Controller-->
+        <!--Location Controller View-->
         <scene sceneID="kR2-gA-EMf">
             <objects>
-                <viewController id="OED-N4-fqm" sceneMemberID="viewController">
+                <viewController id="OED-N4-fqm" customClass="LocationControllerView" customModule="iamhere" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="so5-mI-pov"/>
                         <viewControllerLayoutGuide type="bottom" id="Lz3-sb-5D1"/>
@@ -63,6 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZT-1O-A0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1029" y="129"/>
         </scene>
     </scenes>
 </document>
