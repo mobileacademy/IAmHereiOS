@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="267" y="129"/>
         </scene>
-        <!--View Controller-->
+        <!--Location Controller View-->
         <scene sceneID="kR2-gA-EMf">
             <objects>
-                <viewController id="OED-N4-fqm" sceneMemberID="viewController">
+                <viewController id="OED-N4-fqm" customClass="LocationControllerView" customModule="iamhere" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="so5-mI-pov"/>
                         <viewControllerLayoutGuide type="bottom" id="Lz3-sb-5D1"/>
