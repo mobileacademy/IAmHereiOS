@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -34,12 +35,30 @@
                           ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
                           ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
     NSLog(@"hexToken %@", hexToken);
+    [self viewController].token = hexToken;
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    if ([userInfo objectForKey:@"some_id"]){
-        //NSString *someId = [userInfo valueForKey:@"some_id"];
+    NSString *msg = nil;
+    if ([userInfo objectForKey:@"msg"]){
+        msg = [userInfo valueForKey:@"msg"];
     }
+
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"got new push"
+                                                                   message:msg
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    
+    [[self viewController] presentViewController:alert animated:YES completion:nil];
+    
+}
+
+- (ViewController*) viewController {
+    return (ViewController*)[UIApplication sharedApplication].keyWindow.rootViewController;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

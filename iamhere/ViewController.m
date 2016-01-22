@@ -10,7 +10,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    IBOutlet UILabel *_labelToken;
+}
 
 @end
 
@@ -32,9 +34,8 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
-    NSString *token = @"TBD-01234";
     NSString *msg = @"hello";
-    NSDictionary *params = @{@"token": token, @"msg": msg};
+    NSDictionary *params = @{@"token": _token, @"msg": msg};
     
     [manager POST:@"http://iamhere2.herokuapp.com/messages" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
@@ -42,6 +43,11 @@
         NSLog(@"Error: %@", operation.responseString);
         NSLog(@"Error: %@", error);
     }];
+}
+
+- (void) setToken:(NSString *)token {
+    _labelToken.text = token;
+    _token = token;
 }
 
 @end
