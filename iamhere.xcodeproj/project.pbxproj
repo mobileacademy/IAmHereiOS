@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A00EEDB4E680AE3470AFF4E /* libPods-iamhere.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5807E0D211218033990ADF /* libPods-iamhere.a */; };
 		8E2206A81C52387F00501072 /* LocationControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2206A71C52387F00501072 /* LocationControllerView.swift */; };
+		8E2206AA1C526B4200501072 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2206A91C526B4200501072 /* MapKit.framework */; };
 		913A51C91C517DDD001E280E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 913A51C81C517DDD001E280E /* main.m */; };
 		913A51CC1C517DDD001E280E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 913A51CB1C517DDD001E280E /* AppDelegate.m */; };
 		913A51CF1C517DDD001E280E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913A51CE1C517DDD001E280E /* ViewController.m */; };
@@ -41,6 +42,7 @@
 		8D5807E0D211218033990ADF /* libPods-iamhere.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iamhere.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2206A61C52387F00501072 /* iamhere-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iamhere-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E2206A71C52387F00501072 /* LocationControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationControllerView.swift; sourceTree = "<group>"; };
+		8E2206A91C526B4200501072 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		913A51C41C517DDD001E280E /* iamhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iamhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913A51C81C517DDD001E280E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		913A51CA1C517DDD001E280E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2206AA1C526B4200501072 /* MapKit.framework in Frameworks */,
 				3A00EEDB4E680AE3470AFF4E /* libPods-iamhere.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +167,7 @@
 		D2BE4BBAA1B819B9D3F55641 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E2206A91C526B4200501072 /* MapKit.framework */,
 				8D5807E0D211218033990ADF /* libPods-iamhere.a */,
 			);
 			name = Frameworks;

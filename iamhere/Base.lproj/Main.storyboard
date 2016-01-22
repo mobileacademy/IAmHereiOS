@@ -72,6 +72,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vMX-eQ-AEk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcl-dY-Oaw">
                                 <rect key="frame" x="20" y="28" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -88,16 +91,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="qSd-gl-mTg" secondAttribute="trailing" id="2WN-mf-U6r"/>
+                            <constraint firstItem="vMX-eQ-AEk" firstAttribute="centerX" secondItem="ZoD-fC-9hD" secondAttribute="centerX" id="AG3-D4-HsW"/>
                             <constraint firstAttribute="leadingMargin" secondItem="vcl-dY-Oaw" secondAttribute="leading" id="EjA-yF-YMz"/>
+                            <constraint firstItem="vMX-eQ-AEk" firstAttribute="width" secondItem="ZoD-fC-9hD" secondAttribute="width" id="JDx-Zn-dM3"/>
                             <constraint firstItem="qSd-gl-mTg" firstAttribute="top" secondItem="so5-mI-pov" secondAttribute="bottom" constant="8" id="OMo-aA-wUw"/>
+                            <constraint firstItem="vMX-eQ-AEk" firstAttribute="height" secondItem="ZoD-fC-9hD" secondAttribute="height" id="bBK-vB-IGc"/>
                             <constraint firstItem="qSd-gl-mTg" firstAttribute="width" secondItem="ZoD-fC-9hD" secondAttribute="width" multiplier="0.5" id="dv4-Rb-sr1"/>
                             <constraint firstItem="vcl-dY-Oaw" firstAttribute="top" secondItem="so5-mI-pov" secondAttribute="bottom" constant="8" id="mod-ar-rlx"/>
+                            <constraint firstItem="vMX-eQ-AEk" firstAttribute="centerY" secondItem="ZoD-fC-9hD" secondAttribute="centerY" id="n9n-Aj-4vg"/>
                             <constraint firstItem="vcl-dY-Oaw" firstAttribute="width" secondItem="ZoD-fC-9hD" secondAttribute="width" multiplier="0.5" id="yB8-2a-xKM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="latLabel" destination="vcl-dY-Oaw" id="l9h-Cf-K02"/>
                         <outlet property="longLabel" destination="qSd-gl-mTg" id="fUa-nF-Lzq"/>
+                        <outlet property="map" destination="vMX-eQ-AEk" id="W3j-je-Bya"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZT-1O-A0u" userLabel="First Responder" sceneMemberID="firstResponder"/>

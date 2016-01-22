@@ -9,11 +9,13 @@
 import Foundation
 import UIKit
 import CoreLocation
+import MapKit
 
 class LocationControllerView: UIViewController, CLLocationManagerDelegate{
     
     @IBOutlet weak var longLabel: UILabel!
     @IBOutlet weak var latLabel: UILabel!
+    @IBOutlet weak var map: MKMapView!
     
     var locationManager:CLLocationManager?
     
