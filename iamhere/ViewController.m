@@ -31,4 +31,7 @@
     _token = token;
 }
 
+- (IBAction) pushSomething:(id)sender {
+    NSLog(@"will do a push with token %@", _token);
+}
 @end

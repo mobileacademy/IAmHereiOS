@@ -26,12 +26,15 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4n-7v-Q3d">
                                 <rect key="frame" x="20" y="20" width="92" height="30"/>
                                 <state key="normal" title="push"/>
+                                <connections>
+                                    <action selector="pushSomething:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rrg-y5-tmR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="labelToken" destination="bPW-K5-1AL" id="owu-zG-0QV"/>
+                        <outlet property="labelToken" destination="bPW-K5-1AL" id="ckG-34-dia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
