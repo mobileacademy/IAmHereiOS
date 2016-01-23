@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    IBOutlet UILabel *labelToken;
+}
 
 @end
 
@@ -22,6 +24,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) setToken:(NSString *)token {
+    labelToken.text = token;
+    _token = token;
 }
 
 @end
