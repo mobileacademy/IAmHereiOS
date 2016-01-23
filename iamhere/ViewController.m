@@ -6,6 +6,8 @@
 //  Copyright © 2016 Mobile Academy. All rights reserved.
 //
 
+#import <AFNetworking/AFNetworking.h>
+
 #import "ViewController.h"
 
 @interface ViewController () {
@@ -33,5 +35,19 @@
 
 - (IBAction) pushSomething:(id)sender {
     NSLog(@"will do a push with token %@", _token);
-}
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    NSString *msg = @"hello";
+    NSDictionary *params = @{@"token": _token, @"msg": msg};
+    
+    [manager POST:@"http://iamhere2.herokuapp.com/messages" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", operation.responseString);
+        NSLog(@"Error: %@", error);
+    }];}
 @end
