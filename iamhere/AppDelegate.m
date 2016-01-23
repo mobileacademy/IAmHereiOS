@@ -30,6 +30,25 @@
         [self application:application didRegisterForRemoteNotificationsWithDeviceToken:data];
     });
 #endif
+    
+    if (launchOptions) { //launchOptions is not nil
+        NSDictionary *userInfo = [launchOptions valueForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        NSDictionary *apsInfo = [userInfo objectForKey:@"aps"];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"got dead push"
+                                                                           message:@"dasdas"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {}];
+            
+            [alert addAction:defaultAction];
+            
+            [[self viewController] presentViewController:alert animated:YES completion:nil];
+
+        });
+    }
+    
     return YES;
 }
 
